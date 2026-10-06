@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 4: анкета</title>
+</head>
+<body>
+  <div align="center">
+    <h1>Анкета студента</h1>
+
+    <!-- Форма 1: дані потрапляють в url-адресу (name=value&name=value) -->
+    <form action="" method="get">
+      <h2>Форма 1 (method="get")</h2>
+
+      <fieldset>
+        <legend>Особисті дані</legend>
+        <p>
+          <label for="firstname">Ім’я:</label>
+          <input type="text" id="firstname" name="firstname" value="" placeholder="Введіть ім’я" required tabindex="1">
+        </p>
+        <p>
+          <label for="lastname">Прізвище:</label>
+          <input type="text" id="lastname" name="lastname" value="" placeholder="Введіть прізвище" required tabindex="2">
+        </p>
+        <p>
+          <label for="birthdate">Дата народження:</label>
+          <input type="date" id="birthdate" name="birthdate" value="" tabindex="3">
+        </p>
+        <p>
+          <label for="about">Про себе:</label><br>
+          <textarea id="about" name="about" rows="4" cols="40" placeholder="Розкажіть коротко про себе" tabindex="4"></textarea>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Облікові дані</legend>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="" placeholder="name@example.com"
+                 pattern="[\w.+\-]+@[\w.\-]+\.[a-zA-Z]{2,}" autocomplete="off" required tabindex="5">
+        </p>
+        <p>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" value="" placeholder="6 символів: A-Z, a-z, 0-9"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+                 title="Рівно 6 символів: щонайменше одна велика літера, одна мала літера і одна цифра"
+                 required tabindex="6">
+        </p>
+        <p>
+          <label for="phone">Мобільний номер:</label>
+          <input type="tel" id="phone" name="phone" value="" placeholder="+380501234567"
+                 pattern="\+380\d{9}" title="Формат: +380XXXXXXXXX" tabindex="7">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Навчання та вподобання</legend>
+        <p>
+          Форма навчання:
+          <input type="radio" id="study-day" name="study" value="day" required tabindex="8">
+          <label for="study-day">Денна</label>
+          <input type="radio" id="study-ext" name="study" value="extramural" tabindex="9">
+          <label for="study-ext">Заочна</label>
+          <input type="radio" id="study-dist" name="study" value="distance" tabindex="10">
+          <label for="study-dist">Дистанційна</label>
+        </p>
+        <p>
+          Рівень знань HTML:
+          <input type="radio" id="lvl-beg" name="level" value="beginner" tabindex="11">
+          <label for="lvl-beg">Початковий</label>
+          <input type="radio" id="lvl-mid" name="level" value="intermediate" checked tabindex="12">
+          <label for="lvl-mid">Середній</label>
+          <input type="radio" id="lvl-adv" name="level" value="advanced" tabindex="13">
+          <label for="lvl-adv">Просунутий</label>
+        </p>
+        <p>
+          Інтереси:
+          <input type="checkbox" id="int-web" name="interests" value="web" tabindex="14">
+          <label for="int-web">Веб</label>
+          <input type="checkbox" id="int-ai" name="interests" value="ai" tabindex="15">
+          <label for="int-ai">ШІ</label>
+          <input type="checkbox" id="int-games" name="interests" value="games" tabindex="16">
+          <label for="int-games">Ігри</label>
+          <input type="checkbox" id="int-music" name="interests" value="music" tabindex="17">
+          <label for="int-music">Музика</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Випадні списки</legend>
+        <p>
+          <label for="course">Курс (3-й за замовчуванням):</label>
+          <select id="course" name="course" tabindex="18">
+            <option value="1">1 курс</option>
+            <option value="2">2 курс</option>
+            <option value="3" selected>3 курс</option>
+            <option value="4">4 курс</option>
+            <option value="5">5 курс</option>
+          </select>
+        </p>
+        <p>
+          <label for="languages">Мови програмування (Ctrl + клік для множинного вибору):</label><br>
+          <select id="languages" name="languages" multiple size="6" tabindex="19">
+            <option value="js">JavaScript</option>
+            <option value="py">Python</option>
+            <option value="java">Java</option>
+            <option value="cs">C#</option>
+            <option value="cpp">C++</option>
+            <option value="php">PHP</option>
+          </select>
+        </p>
+        <p>
+          <label for="subject">Улюблений предмет:</label>
+          <select id="subject" name="subject" tabindex="20">
+            <optgroup label="Програмування">
+              <option value="web">Веб-технології</option>
+              <option value="algo">Алгоритми</option>
+              <option value="oop">ООП</option>
+            </optgroup>
+            <optgroup label="Математика">
+              <option value="calc">Матаналіз</option>
+              <option value="algebra">Алгебра</option>
+              <option value="discrete">Дискретна математика</option>
+            </optgroup>
+            <optgroup label="Мови">
+              <option value="en">Англійська</option>
+              <option value="de">Німецька</option>
+              <option value="ua">Українська</option>
+            </optgroup>
+            <optgroup label="Інше">
+              <option value="hist">Історія</option>
+              <option value="phys">Фізика</option>
+              <option value="pe">Фізкультура</option>
+            </optgroup>
+          </select>
+        </p>
+        <p>
+          <label for="city">Місто:</label>
+          <input list="cities" id="city" name="city" value="" placeholder="Почніть вводити назву" tabindex="21">
+          <datalist id="cities">
+            <option value="Київ">
+            <option value="Львів">
+            <option value="Чернівці">
+            <option value="Одеса">
+            <option value="Харків">
+            <option value="Дніпро">
+          </datalist>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit" name="action" value="submit" tabindex="22">Відправити</button>
+        <button type="reset" name="action" value="reset" tabindex="23">Скинути</button>
+      </p>
+    </form>
+
+    <!-- Форма 2: дані передаються в тілі запиту (DevTools -> Network). Файли надсилаються лише так. -->
+    <form action="" method="post" enctype="multipart/form-data">
+      <h2>Форма 2 (method="post", enctype="multipart/form-data")</h2>
+      <fieldset>
+        <legend>Завантаження файлів</legend>
+        <p>
+          <label for="nick">Нікнейм:</label>
+          <input type="text" id="nick" name="nickname" value="" placeholder="Ваш нікнейм" required tabindex="24">
+        </p>
+        <p>
+          <label for="audio">Аудіофайли (можна кілька):</label>
+          <input type="file" id="audio" name="audio" accept="audio/*" multiple tabindex="25">
+        </p>
+      </fieldset>
+      <p>
+        <button type="submit" name="action" value="post" tabindex="26">Відправити</button>
+        <button type="reset" name="action" value="reset" tabindex="27">Скинути</button>
+      </p>
+    </form>
+
+    <p><a href="../index.html">Повернутись на головну</a></p>
+  </div>
+</body>
+</html>
