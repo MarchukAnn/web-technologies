@@ -1,0 +1,49 @@
+/* Універсальний селектор: шрифт, розмір, інтервал між рядками */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* Селектори тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* Селектори класу */
+.red {
+    color: red;
+}
+
+.shadow {
+    text-shadow: 5px -5px 3px #ff0000;
+}
+
+/* заборона перенесення рядка */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Селектор ідентифікатора */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Перший div: перекреслення, верхній регістр, відступ першого рядка */
+.div-first {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+/* Другий div: інтервали між символами та словами */
+.div-second {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
