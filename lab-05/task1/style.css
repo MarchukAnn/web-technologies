@@ -1,0 +1,82 @@
+.plan-list,
+.stage-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+}
+
+.plan-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.stage,
+.stage-list > li {
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+/* 1-й рівень списку */
+.stage {
+    background-color: rgb(103, 158, 128);
+    padding-right: 20px;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    background-position: 10px 10px;
+}
+
+.stage:last-child {
+    margin-bottom: 0;
+}
+
+.stage-title {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* 2-й рівень списку */
+.stage-list {
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stage-list > li {
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-position: 5px center;
+}
+
+.stage-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.stage-list > li > span {
+    background-color: rgb(218, 106, 32);
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.i-checklist { background-image: url('icons/rule.png'); }
+.i-phone     { background-image: url('icons/phone.png'); }
+.i-ticket    { background-image: url('icons/airplane_ticket.png'); }
+.i-hotel     { background-image: url('icons/hotel.png'); }
+.i-car       { background-image: url('icons/car_rental.png'); }
+.i-bar       { background-image: url('icons/local_bar.png'); }
+.i-casino    { background-image: url('icons/casino.png'); }
+.i-museum    { background-image: url('icons/museum.png'); }
+.i-festival  { background-image: url('icons/festival.png'); }

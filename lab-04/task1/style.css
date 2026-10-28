@@ -5,7 +5,6 @@
     line-height: 40px;
 }
 
-/* Селектори тегів */
 p {
     color: green;
     text-align: center;
@@ -15,35 +14,34 @@ div {
     text-align: justify;
 }
 
-/* Селектори класу */
-.red {
+.text-color {
     color: red;
 }
 
-.shadow {
+.text-shadow {
     text-shadow: 5px -5px 3px #ff0000;
 }
 
 /* заборона перенесення рядка */
-.nowrap {
+.text-nowrap {
     white-space: nowrap;
 }
 
-/* Селектор ідентифікатора */
+/* ідентифікатор */
 #italic-bold {
     font-style: italic;
     font-weight: bold;
 }
 
-/* Перший div: перекреслення, верхній регістр, відступ першого рядка */
-.div-first {
+/* перекреслення, верхній регістр, відступ першого рядка */
+.text-cross {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
-/* Другий div: інтервали між символами та словами */
-.div-second {
+/* інтервали між символами та словами */
+.text-spacing {
     letter-spacing: 30px;
     word-spacing: 50px;
 }

@@ -1,0 +1,44 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    font-family: "Georgia", "Times New Roman", serif;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid #ffffff;
+    padding: 22px 10px;
+}
+
+/* ---------- Шапка таблиці ---------- */
+thead th {
+    color: #ffffff;
+    font-weight: normal; /* Звичайний текст, не жирний */
+    font-size: 20px;
+}
+
+thead th:nth-child(1) { background-color: #f1dcdc; }
+thead th:nth-child(2) { background-color: #e3b7b7; }
+thead th:nth-child(3) { background-color: #d69494; }
+thead th:nth-child(4) { background-color: #933a3a; }
+thead th:nth-child(5) { background-color: #662525; }
+
+/* ---------- Тіло таблиці ---------- */
+tbody th {
+    background-color: #bb5252;
+    color: #ffffff;
+    font-weight: normal; /* Прибрано жирність */
+    font-size: 18px;
+    width: 22%;
+}
+
+/* Чергування рядків td */
+tbody tr:nth-child(odd) td  { background-color: #e3b7b7; }
+tbody tr:nth-child(even) td { background-color: #f1dcdc; }
+
+tbody td {
+    color: #333333;
+    font-weight: normal; /* Прибрано жирність */
+    font-size: 18px;
+}

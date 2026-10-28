@@ -1,75 +1,52 @@
-/* Загальні налаштування сторінки */
 body {
     font-family: "Times New Roman", Times, serif;
 }
 
-/* 1. span всередині p.text-background:
-      курсив, жирність, підкреслення (комбінатор нащадків: клас + тег) */
 .text-background span {
     font-style: italic;
     font-weight: bold;
     text-decoration: underline;
 }
 
-/* 2. Жовтий фон лише для span у .text-background, які лежать у div
-      (комбінатор нащадків: тег + клас + тег) */
 div .text-background span {
     background-color: yellow;
 }
 
-/* 3. span всередині інших span: сірий фон + перекреслення
-      (комбінатор нащадків: два теги) */
 span span {
     background-color: gray;
     text-decoration: line-through;
 }
 
-/* 4. span у span у нумерованому списку: 18px + верхній регістр
-      (комбінатор нащадків: три теги) */
 ol span span {
     font-size: 18px;
     text-transform: uppercase;
 }
 
-/* 5. Абзаци — дочірні елементи section (лише 1-й рівень):
-      тінь + відступ першого рядка (комбінатор дочірнього елемента: два теги) */
 section > p {
     text-shadow: 3px 3px 5px #cc0000;
     text-indent: 50px;
 }
 
-/* 6. ul, що лежить безпосередньо в li: маркер — зображення
-      (комбінатор дочірнього елемента: два теги) */
 li > ul {
     list-style-image: url("img/li.svg");
 }
 
-/* 7. Абзаци .text-background, що є дочірніми для div: інтервал між словами
-      (комбінатор дочірнього елемента: тег + клас) */
 div > .text-background {
     word-spacing: 50px;
 }
 
-/* 8. Абзаци — дочірні елементи div.text-bold: жирність
-      (комбінатор дочірнього елемента: клас + тег) */
 .text-bold > p {
     font-weight: bold;
 }
 
-/* 9. Абзаци в section, який є прямим нащадком div.text-bold: міжрядковий інтервал
-      (комбінатор дочірнього елемента: клас + два теги) */
 .text-bold > section > p {
     line-height: 45px;
 }
 
-/* 10. Коричневий фон лише для абзацу, що стоїть відразу після img
-       (комбінатор наступного сусіда: два теги) */
 img + p {
     background-color: brown;
 }
 
-/* 11. Червоний текст для всіх абзаців, що йдуть після section на тому ж рівні
-       (комбінатор усіх сусідів: два теги) */
 section ~ p {
     color: red;
 }

@@ -1,0 +1,154 @@
+
+
+/* ---------- Змінні (палітра) ---------- */
+body {
+    --page_bg_color: #e9f1f6;       
+    --form_bg_color: #ffffff;       
+    --fieldset_bg_color: #f6fafc;    
+    --field_bg_color: #ffffff;      
+    --field_focus_bg_color: #fff8dc; 
+    --accent_color: #8b1f1f;        
+    --accent_dark_color: #6a1414; 
+    --reset_bg_color: #947a7a;     
+    --text_color: #3b2222;           
+    --light_text_color: #ffffff;     
+    --border_color: #d3a9a9;
+
+    background-color: var(--page_bg_color);
+    color: var(--text_color);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;                /* міжрядковий інтервал */
+    margin: 0;
+    padding: 20px;
+}
+
+/* ---------- Заголовки ---------- */
+h1 {
+    color: var(--accent_color);
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;       /* ВЕЛИКІ літери */
+    letter-spacing: 3px;             /* відстань між літерами */
+    text-shadow: 1px 1px 2px #b8d2de;
+}
+
+h2 {
+    background-color: var(--accent_color);   /* фон-плашка під заголовком форми */
+    color: var(--light_text_color);
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: left;
+    padding: 8px 14px;
+    margin: 0 0 15px 0;
+}
+
+/* ---------- Форма ---------- */
+form {
+    background-color: var(--form_bg_color);
+    max-width: 680px;
+    margin: 0 auto 30px auto;        /* auto по боках – центрує форму */
+    padding: 0 0 15px 0;
+    text-align: left;                /* всередині форми текст ліворуч (div align=center центрує все) */
+}
+
+/* ---------- Група полів ---------- */
+fieldset {
+    background-color: var(--fieldset_bg_color);
+    border: 1px solid var(--border_color);
+    margin: 0 15px 15px 15px;
+}
+
+legend {
+    background-color: var(--accent_color);
+    color: var(--light_text_color);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 2px 12px;
+}
+
+/* ---------- Підписи ---------- */
+label {
+    font-weight: 600;
+    color: var(--accent_dark_color);
+    margin-right: 6px;
+}
+
+/* ---------- Поля введення ----------
+   Атрибутні селектори: input[type="text"] – лише текстові поля тощо.
+   Перелік через кому – одні й ті самі стилі для кількох елементів. */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[list],
+input[type="file"],
+select,
+textarea {
+    background-color: var(--field_bg_color);
+    color: var(--text_color);
+    font-family: inherit;            /* поля за замовчуванням мають власний шрифт – беремо шрифт сторінки */
+    font-size: 15px;
+    border: 1px solid var(--border_color);
+    padding: 5px 8px;
+}
+
+/* Підказка (placeholder) – сірий курсив */
+::placeholder {
+    color: #8a9ba3;
+    font-style: italic;
+}
+
+/* :focus – поле, в яке зараз вводять текст */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: var(--field_focus_bg_color);
+}
+
+/* :invalid – поле, яке не пройшло перевірку (required / pattern) */
+input:invalid:not(:placeholder-shown) {
+    background-color: #fde8e8;
+}
+
+/* ---------- Кнопки ---------- */
+button {
+    background-color: var(--accent_color);
+    color: var(--light_text_color);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    padding: 9px 22px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: var(--reset_bg_color);
+}
+
+/* :hover – курсор над кнопкою */
+button[type="submit"]:hover {
+    background-color: var(--accent_dark_color);
+}
+
+button[type="reset"]:hover {
+    background-color: #5d6d75;
+}
+
+/* ---------- Посилання ---------- */
+a {
+    color: var(--accent_color);
+    font-weight: 600;
+    text-decoration: none;           /* прибираємо підкреслення */
+}
+
+a:hover {
+    text-decoration: underline;      /* підкреслення лише при наведенні */
+}

@@ -1,0 +1,111 @@
+/* =====================================================
+   Завдання 5. box-sizing, overflow, display
+   ===================================================== */
+
+body {
+    --page_bg_color: #f5f7fa;
+    --block_bg_color: #f8d6d6;
+    --block_border_color: #8d2a1f;
+    --menu_bg_color: #8d1f1f;
+    --menu_hover_color: #601515;
+    --text_color: #311b1b;
+    --menu_text_color: #ffffff;
+
+    background-color: var(--page_bg_color);
+    color: var(--text_color);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+}
+
+/* ================= ЧАСТИНА 1: box-sizing =================
+   Обидва блоки мають width: 300px, padding: 20px, border: 5px solid.
+   Різниця лише в тому, ЩО саме означає width.
+   Селектор ".part_box_sizing div:nth-of-type(1)" – перший div усередині section
+   (nth-of-type рахує елементи одного типу всередині одного батька). */
+.part_box_sizing div {
+    display: inline-block;           /* блоки в ряд */
+    margin: 20px;                    /* зовнішній відступ 20px */
+    width: 300px;
+    padding: 20px;
+    border: 5px solid var(--block_border_color);
+    background-color: var(--block_bg_color);
+    vertical-align: top;
+}
+
+.part_box_sizing div:nth-of-type(1) {
+    box-sizing: content-box;
+    /* content-box (за замовчуванням): width – це ширина лише ВМІСТУ.
+       Padding та border додаються зверху.
+       Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+.part_box_sizing div:nth-of-type(2) {
+    box-sizing: border-box;
+    /* border-box: width включає вміст + padding + border.
+       Загальна ширина: 300px (вміст при цьому стискається до 300 - 40 - 10 = 250px) */
+}
+
+/* ================= ЧАСТИНА 2: overflow =================
+   Текст довший, ніж 80px висоти – він "переповнює" блок.
+   overflow вирішує, що робити з надлишком. */
+.part_overflow div {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 210px;
+    padding: 4px 6px;
+    max-height: 80px;                /* максимальна висота блоку */
+    border: 2px solid var(--block_border_color);
+    background-color: var(--block_bg_color);
+    margin: 0 12px 150px 0;          /* великий нижній відступ – місце для тексту, що виходить за межі visible */
+}
+
+/* visible (за замовчуванням): текст виходить за межі блоку і лишається видимим */
+.part_overflow div:nth-of-type(1) { overflow: visible; }
+
+/* hidden: все, що не вмістилось, обрізається та ховається */
+.part_overflow div:nth-of-type(2) { overflow: hidden; }
+
+/* scroll: смуги прокрутки показуються ЗАВЖДИ, навіть якщо вони не потрібні */
+.part_overflow div:nth-of-type(3) { overflow: scroll; }
+
+/* auto: смуги прокрутки з'являються ТІЛЬКИ коли вміст не вміщується */
+.part_overflow div:nth-of-type(4) { overflow: auto; }
+
+/* ================= ЧАСТИНА 3: display =================
+   Горизонтальне меню БЕЗ float та flex – лише через display: inline-block. */
+.part_display ul {
+    list-style: none;                /* ховаємо маркери списку */
+    margin: 0;
+    padding: 0;
+}
+
+.part_display li {
+    display: inline-block;           /* li стають у ряд, але зберігають розміри та відступи */
+}
+
+.part_display a {
+    display: block;                  /* посилання займає всю площу li, клікабельна вся "кнопка" */
+    padding: 10px 20px;              /* верх/низ 10px, ліво/право 20px */
+    background-color: var(--menu_bg_color);
+    color: var(--menu_text_color);
+    text-decoration: none;           /* прибираємо підкреслення */
+}
+
+.part_display a:hover {
+    background-color: var(--menu_hover_color);
+}
+
+/* Ховаємо 4-й пункт меню ("Блог") */
+.part_display li:nth-child(4) {
+    display: none;
+/* Чим display: none відрізняється від інших способів приховування:
+* display: none – елемент ПОВНІСТЮ вилучається з потоку: не займає місця,
+на нього не можна клікнути, його не читають скрінрідери, сусідні пункти зсуваються на його місце.
+* visibility: hidden – елемент невидимий, але ЗАЛИШАЄ порожнє місце в макеті.
+* opacity: 0 – елемент прозорий, але займає місце і лишається клікабельним.
+* width/height: 0 + overflow: hidden – "стискає" елемент, але він ще існує в макеті
+(можливі відступи, фокус клавіатурою).
+* position: absolute; left: -9999px – виводить за екран; місце звільняється,
+але елемент лишається доступним для скрінрідерів. */
+}

@@ -3,16 +3,7 @@ body {
     background-color: #ffffff;
 }
 
-/* Рамка навколо всього рецепта */
-.recipe {
-    width: 700px;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border: 1px solid #9999dd;
-    text-align: center;
-}
-
-/* Селектори тегів */
+/* теги */
 h1 {
     color: red;
     font-size: 32px;
@@ -41,31 +32,31 @@ hr {
     background-color: green;
 }
 
-/* Селектори класів */
-.name {
+/* класи */
+.text-bold {
     font-weight: bold;
 }
 
-.amount {
+.text-small {
     font-size: 13px;
 }
 
-.extra {
+.underline {
     font-size: 13px;
     text-decoration: underline;
 }
 
-.old {
+.line-through {
     text-decoration: line-through;
 }
 
-.highlight {
+.text-background {
     background-color: yellow;
     text-decoration: underline;
 }
 
-/* Селектор ідентифікатора */
-#footer-note {
+/* ідентифікатор */
+#recipe-footer {
     font-family: "Courier New", Courier, monospace;
     font-style: italic;
     font-size: 14px;
