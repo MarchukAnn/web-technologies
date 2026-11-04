@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Завдання 5 лаби 6</title>
+    <link rel="icon" href="icons/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="header-nav">
+        <a class="header-link" href="#mail">Mail</a>
+        <a class="header-link" href="#images">Images</a>
+        <div class="popup-wrap">
+          <input
+            class="popup-toggle"
+            type="checkbox"
+            id="popup-toggle"
+            aria-label="Програми"
+          />
+          <label class="popup-button" for="popup-toggle" title="Програми">
+            <img
+              class="popup-button-icon"
+              src="icons/popup-button.png"
+              alt=""
+            />
+          </label>
+          <div class="popup">
+            <div class="popup-scroll" tabindex="0">
+              <input
+                class="more-toggle"
+                type="checkbox"
+                id="more-toggle"
+                aria-label="More"
+              />
+              <ul class="apps">
+                <li class="apps-item">
+                  <a class="app" href="#calendar"
+                    ><img
+                      class="app-icon"
+                      src="icons/calendar.png"
+                      alt=""
+                    /><span class="app-name">Calendar</span></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#mail"
+                    ><img class="app-icon" src="icons/mail.png" alt="" /><span
+                      class="app-name"
+                      >Mail</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#news"
+                    ><img class="app-icon" src="icons/news.png" alt="" /><span
+                      class="app-name"
+                      >News</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#map"
+                    ><img class="app-icon" src="icons/maps.png" alt="" /><span
+                      class="app-name"
+                      >Map</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#files"
+                    ><img class="app-icon" src="icons/files.png" alt="" /><span
+                      class="app-name"
+                      >Files</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#contacts"
+                    ><img
+                      class="app-icon"
+                      src="icons/contacts.png"
+                      alt=""
+                    /><span class="app-name">Contacts</span></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#translate"
+                    ><img
+                      class="app-icon"
+                      src="icons/translation.png"
+                      alt=""
+                    /><span class="app-name">Translate</span></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#videos"
+                    ><img class="app-icon" src="icons/videos.png" alt="" /><span
+                      class="app-name"
+                      >Videos</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#search"
+                    ><img class="app-icon" src="icons/search.png" alt="" /><span
+                      class="app-name"
+                      >Search</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#photo"
+                    ><img class="app-icon" src="icons/photos.png" alt="" /><span
+                      class="app-name"
+                      >Photo</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#apps"
+                    ><img class="app-icon" src="icons/apps.png" alt="" /><span
+                      class="app-name"
+                      >Apps</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#documents"
+                    ><img
+                      class="app-icon"
+                      src="icons/documents.png"
+                      alt=""
+                    /><span class="app-name">Document</span></a
+                  >
+                </li>
+              </ul>
+              <ul class="apps apps--extra">
+                <li class="apps-item">
+                  <a class="app" href="#chat"
+                    ><img class="app-icon" src="icons/chat.png" alt="" /><span
+                      class="app-name"
+                      >Chat</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#classroom"
+                    ><img
+                      class="app-icon"
+                      src="icons/classroom.png"
+                      alt=""
+                    /><span class="app-name">Classroom</span></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#collection"
+                    ><img
+                      class="app-icon"
+                      src="icons/collection.png"
+                      alt=""
+                    /><span class="app-name">Collection</span></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#mars"
+                    ><img class="app-icon" src="icons/mars.png" alt="" /><span
+                      class="app-name"
+                      >Mars</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#blogs"
+                    ><img class="app-icon" src="icons/blogs.png" alt="" /><span
+                      class="app-name"
+                      >Blogs</span
+                    ></a
+                  >
+                </li>
+                <li class="apps-item">
+                  <a class="app" href="#promos"
+                    ><img class="app-icon" src="icons/promo.png" alt="" /><span
+                      class="app-name"
+                      >Promos</span
+                    ></a
+                  >
+                </li>
+              </ul>
+              <a class="even-more" href="#more-apps">Even more from Kottans</a>
+              <label class="more-button" for="more-toggle">More</label>
+            </div>
+          </div>
+        </div>
+        <a class="header-icon-link" href="#notifications" title="Сповіщення">
+          <img class="header-icon" src="icons/bell.png" alt="Сповіщення" />
+        </a>
+        <a class="avatar" href="#account" title="Акаунт">A</a>
+      </nav>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Загальний контейнер із двох колонок */
+.container {
+  display: flex;
+  gap: 15px;
+}
+
+/* Колонки */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 180px;
+}
+
+/* Базовий стиль для всіх блоків */
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #000000; /* Чорна обводка */
+  border-radius: 2px;
+}
+
+/* Зелені блоки (Блок 1-1 та Блок 1-2) */
+.trigger-block {
+  background-color: #00b050;
+  color: #000000;
+  height: 45px;
+  cursor: pointer;
+}
+
+/* Сині блоки (Блок 2-1 та Блок 2-2) */
+.target-block {
+  background-color: #4f81bd;
+  color: #ffffff;
+  height: 140px;
+  padding: 10px;
+  
+  /* Приховуємо блоки за замовчуванням */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 1. Наведення на Блок 1-1 показує Блок 2-1 (суміжний селектор +) */
+.column:first-child .trigger-block:hover + .target-block {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 2. Наведення на Блок 1-2 показує Блок 2-2 (селектор :has) */
+.column:last-child:has(.trigger-block:hover) .target-block {
+  opacity: 1;
+  visibility: visible;
+}
